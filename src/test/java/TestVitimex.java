@@ -35,5 +35,17 @@ public void test() throws InterruptedException {
     driver.findElement(By.id("search-header-btn")).click();
     Thread.sleep(3000);
     }
-
+@Test
+    public void testTimKiemMayBay() throws InterruptedException{
+    driver.get("https://www.bambooairways.com/vn/vi");
+    Thread.sleep(3000);
+    driver.findElement(By.id("cookie-popup-agree")).click();
+    driver.findElement(By.id("oneWayRadio")).click();
+    driver.findElement(By.id("departDate")).click();
+    driver.findElement(By.id("departDate")).sendKeys("20/12/2025");
+    driver.findElement(By.id("passenger")).click();
+    driver.findElement(By.id("plusAdult")).click();
+    driver.findElement(By.cssSelector("input[type='submit'][value='Tìm chuyến bay']")).click();
+    Thread.sleep(3000);
+    }
 }
